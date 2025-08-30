@@ -1,6 +1,6 @@
-// App.js
+
 import React, { useState, useEffect } from "react";
-// Добавьте в начало файла App.js
+
 import "./styles.css";
 import {
   ShoppingCartIcon,
@@ -33,10 +33,10 @@ const App = () => {
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Имитация данных (в реальном приложении будут API-запросы)
+  
   useEffect(() => {
     if (isAuthenticated) {
-      // Загрузка организаций
+     
       setOrganizations([
         { id: 38, name: 'ООО "Ромашка"' },
         { id: 43, name: "ИП Сидоров" },
@@ -44,7 +44,7 @@ const App = () => {
         { id: 40, name: 'ТД "Стройматериалы"' },
       ]);
 
-      // Загрузка складов
+     
       setWarehouses([
         { id: 39, name: "Основной склад" },
         { id: 50, name: "Склад на Ленина" },
@@ -52,7 +52,7 @@ const App = () => {
         { id: 47, name: "Центральный склад" },
       ]);
 
-      // Загрузка типов цен
+  
       setPriceTypes([
         { id: 1, name: "Розничная" },
         { id: 2, name: "Оптовая" },
@@ -60,7 +60,7 @@ const App = () => {
         { id: 4, name: "Специальная" },
       ]);
 
-      // Загрузка товаров
+     
       setProducts([
         { id: 1, name: "Товар 1", price: 1000 },
         { id: 2, name: "Товар 2", price: 500 },
@@ -81,7 +81,7 @@ const App = () => {
   const searchClients = () => {
     if (clientPhone) {
       setIsLoading(true);
-      // Имитация поиска клиентов
+    
       setTimeout(() => {
         setClients([
           { id: 360753, name: "Test", phone: "+79123456789" },
@@ -151,7 +151,7 @@ const App = () => {
     console.log("Order data:", orderData);
     alert(processOrder ? "Заказ создан и проведен!" : "Заказ создан!");
 
-    // Сброс формы
+  
     setSelectedClient(null);
     setClientPhone("");
     setSelectedOrg("");
